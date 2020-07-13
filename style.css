@@ -1,0 +1,205 @@
+/* 
+#####################
+    RESET CSS
+#####################
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.marker {
+  display: block;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}
+
+.country {
+  width: 4rem;
+  height: 2.5rem;
+  z-index: 1;
+}
+
+.flag {
+  width: 4rem;
+  height: 2.5rem;
+  background-size: contain;
+  cursor: pointer;
+  border-radius: 2px;
+  z-index: 200000;
+  background-position: center;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.country-details {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 1rem;
+  padding: 0.5rem;
+  min-width: 22rem;
+  background-color: #f3f3f3;
+  color: #3f3f3f;
+  transform: translateX(40%);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 5px;
+  z-index: 1000;
+  max-width: 400px;
+}
+
+.country-details .country-detail {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.country-details.mb200 {
+  position: absolute;
+  bottom: 0;
+}
+
+.country-details.mr200 {
+  position: absolute;
+  right: 220px;
+}
+
+.flag.hovered {
+  opacity: 0;
+}
+
+.flag:hover.hovered {
+  opacity: 1;
+}
+
+.flag.hovered:hover ~ .country-details {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(20%);
+}
